@@ -1,0 +1,57 @@
+@startuml signup.pu
+
+title "Sign Up"
+footer Francisco Yanes
+
+actor Client
+boundary AppController
+control SignUpService <<Interface>>
+database AccountRepository
+participant GlobalErrorHandler
+
+Client -> AppController: SignUpRequestDto
+activate AppController
+
+AppController -> AppController: //Request Validation//
+
+alt Valid Request
+    AppController -> SignUpService: createAccount(SignUpRequestDto)
+    activate SignUpService
+
+    SignUpService -> AccountRepository: findByEmail(String)
+    activate AccountRepository
+
+    AccountRepository --> SignUpService: AccountEntity
+    deactivate AccountRepository
+
+    SignUpService -> SignUpService: addAccountToRepository(SignUpRequestDto)
+    activate SignUpService
+
+    SignUpService -> SignUpService: PasswordEncryption.encrypt(String)
+    SignUpService -> AccountRepository: save(AccountEntity)
+    activate AccountRepository
+
+    AccountRepository --> SignUpService: AccountEntity
+    deactivate AccountRepository
+
+    SignUpService --> SignUpService: AccountEntity
+    deactivate SignUpService
+
+    SignUpService --> AppController: ResponseEntity<SignUpResponseDto>
+    deactivate SignUpService
+
+    AppController --> Client: ResponseEntity<SignUpResponseDto>
+
+else Invalid Request
+
+    AppController --> GlobalErrorHandler: handleException(Exception, WebRequest)
+    activate  GlobalErrorHandler
+
+    GlobalErrorHandler --> AppController: ResponseEntity<ErrorResponseDto>
+    deactivate  GlobalErrorHandler
+
+    AppController --> Client: ResponseEntity<ErrorResponseDto>
+    deactivate  AppController
+end
+
+@enduml

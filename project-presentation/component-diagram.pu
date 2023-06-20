@@ -1,0 +1,106 @@
+@startuml component-diagram.pu
+
+package "controller" {
+    component AppController
+}
+
+package "dto" {
+    component ErrorDto
+    component PhoneDto
+
+    package "req" {
+        component SignUpRequestDto
+    }
+
+    package "res" {
+        component ErrorResponseDto
+        component LoginResponseDto
+        component SignUpResponseDto
+    }
+}
+
+package "entity" {
+    component AccountEntity
+    component PhoneEntity
+}
+
+package "exceptions" {
+    component AccountAlreadyExistsException
+    component TokenDoesNotMatchAnyAccountException
+    component PasswordEncryptionErrorException
+}
+
+package "handler" {
+    component GlobalErrorHandler
+}
+
+package "service" {
+    interface LoginService
+    interface SignUpService
+
+    package "impl" {
+        component LoginServiceImpl
+        component SignUpServiceImpl
+    }
+}
+
+database "H2" {
+    interface AccountRepository
+    interface PhoneRepository
+    PhoneRepository -up-> AccountRepository
+}
+
+package "utils" {
+    component CustomDateFormatter
+    component PasswordEncryption
+    CustomDateFormatter -[hidden]-> PasswordEncryption
+}
+
+service -[hidden]-> utils
+utils -[hidden]--> exceptions
+dto <-[hidden]- service
+handler <-[hidden]- controller
+H2 -[hidden]-> entity
+
+AppController -up- HTTP
+
+AppController -down-> LoginServiceImpl
+AppController -down-> SignUpServiceImpl
+AppController - GlobalErrorHandler
+
+LoginServiceImpl -up-> LoginService : implements
+SignUpServiceImpl -up-> SignUpService : implements
+
+LoginServiceImpl .right.> CustomDateFormatter
+LoginServiceImpl .right.> PasswordEncryption
+LoginServiceImpl -right-> TokenDoesNotMatchAnyAccountException
+LoginServiceImpl -down-> AccountRepository
+LoginServiceImpl -down-> AccountEntity
+LoginServiceImpl -down-> PhoneRepository
+LoginServiceImpl -down-> PhoneEntity
+LoginServiceImpl -down-> LoginResponseDto
+LoginServiceImpl -down-> PhoneDto
+
+SignUpServiceImpl .right.> PasswordEncryption
+SignUpServiceImpl -right-> AccountAlreadyExistsException
+SignUpServiceImpl -down-> AccountRepository
+SignUpServiceImpl -down-> AccountEntity
+SignUpServiceImpl -down-> SignUpRequestDto
+SignUpServiceImpl -down-> SignUpResponseDto
+SignUpServiceImpl -down-> PhoneDto
+
+SignUpRequestDto -up-> PhoneDto
+
+ErrorResponseDto -up-> ErrorDto
+
+LoginResponseDto -up-> PhoneDto
+
+AccountRepository -right-> AccountEntity
+
+PhoneRepository -down-> PhoneEntity
+
+GlobalErrorHandler -> ErrorDto
+
+PasswordEncryption -right-> PasswordEncryptionErrorException
+
+@enduml

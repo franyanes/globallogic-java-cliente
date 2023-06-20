@@ -1,0 +1,508 @@
+{
+	"info": {
+		"_postman_id": "a15d20e6-c1c4-45e4-bfb3-52e02967ed8f",
+		"name": "franyanes-bci",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23770486",
+		"_collection_link": "https://dark-meadow-834753.postman.co/workspace/tp-individual~121d2e10-d602-4b44-a43b-fc5b9fbd3cdf/collection/21961353-a15d20e6-c1c4-45e4-bfb3-52e02967ed8f?action=share&creator=23770486&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "sign_up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Simple Account\",\r\n    \"email\":\"simple_account_2023@gmail.com\",\r\n    \"password\":\"Password11\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": 1111111111,\r\n            \"cityCode\": 111,\r\n            \"countryCode\": \"AR\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/bci_app/v1/sign_up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bci_app",
+						"v1",
+						"sign_up"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "[OK] Simple Account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Simple Account\",\r\n    \"email\":\"simple_account_new@gmail.com\",\r\n    \"password\":\"Password11\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": 1111111111,\r\n            \"cityCode\": 111,\r\n            \"countryCode\": \"AR\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/bci_app/v1/sign_up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bci_app",
+								"v1",
+								"sign_up"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"ee641f92-d6d1-47dc-bee3-39add3152839\",\n    \"created\": \"Jun 17, 2023 08:22:22 PM\",\n    \"lastLogin\": null,\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNpbXBsZV9hY2NvdW50X25ld0BnbWFpbC5jb20ifQ.jCTlIq4ZDo6DpAwzRxO1VJCjdXWPGXjnsChW3V4xlds\",\n    \"isActive\": true\n}"
+				},
+				{
+					"name": "[OK] Multiple Phones",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Multiple Phones\",\r\n    \"email\":\"multiple_phones_new@gmail.com\",\r\n    \"password\":\"Password11\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": 1111111111,\r\n            \"cityCode\": 111,\r\n            \"countryCode\": \"AR\"\r\n        },\r\n        {\r\n            \"number\": 2222222222,\r\n            \"cityCode\": 111,\r\n            \"countryCode\": \"CL\"\r\n        },\r\n        {\r\n            \"number\": 3333333333,\r\n            \"cityCode\": 111,\r\n            \"countryCode\": \"PE\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/bci_app/v1/sign_up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bci_app",
+								"v1",
+								"sign_up"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"c88df3b8-958d-4c23-a9b9-b560b2b352dd\",\n    \"created\": \"Jun 20, 2023 01:56:28 PM\",\n    \"lastLogin\": null,\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc19uZXdAZ21haWwuY29tIn0.-WWlt2Mfho9VNqywgXRTxNEy47WNW6Deexo8fFukBy8\",\n    \"isActive\": true\n}"
+				},
+				{
+					"name": "[OK] No Optional Fields",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"no_optional_fields_new@gmail.com\",\r\n    \"password\":\"Password11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/bci_app/v1/sign_up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bci_app",
+								"v1",
+								"sign_up"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"19970334-2541-42d7-85af-ecf9d186a609\",\n    \"created\": \"Jun 20, 2023 01:57:01 PM\",\n    \"lastLogin\": null,\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im5vX29wdGlvbmFsX2ZpZWxkc19uZXdAZ21haWwuY29tIn0.8nc_3XTWFrt04YjGWwzf4zYJOe3ZwXVWFoCHbCai2yg\",\n    \"isActive\": true\n}"
+				},
+				{
+					"name": "[ERROR] Email Taken",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Simple Account\",\r\n    \"email\":\"simple_account@gmail.com\",\r\n    \"password\":\"Password11\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": 1111111111,\r\n            \"cityCode\": 111,\r\n            \"countryCode\": \"AR\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/bci_app/v1/sign_up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bci_app",
+								"v1",
+								"sign_up"
+							]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": [\n        {\n            \"timestamp\": \"Jun 19, 2023 06:31:25 PM\",\n            \"code\": 409,\n            \"detail\": \"An account with that email already exists\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "[ERROR] Invalid Email",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Simple Account\",\r\n    \"email\":\"not an email\",\r\n    \"password\":\"Password11\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": 1111111111,\r\n            \"cityCode\": 111,\r\n            \"countryCode\": \"AR\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/bci_app/v1/sign_up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bci_app",
+								"v1",
+								"sign_up"
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 19 Jun 2023 00:11:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": [\n        {\n            \"timestamp\": \"Jun 19, 2023 06:14:45 PM\",\n            \"code\": 422,\n            \"detail\": \"The email format is invalid\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "[ERROR] Invalid Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Simple Account\",\r\n    \"email\":\"simple_account@gmail.com\",\r\n    \"password\":\" \",\r\n    \"phones\": [\r\n        {\r\n            \"number\": 1111111111,\r\n            \"cityCode\": 111,\r\n            \"countryCode\": \"AR\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/bci_app/v1/sign_up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bci_app",
+								"v1",
+								"sign_up"
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 19 Jun 2023 01:15:52 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": [\n        {\n            \"timestamp\": \"Jun 19, 2023 06:15:44 PM\",\n            \"code\": 422,\n            \"detail\": \"The password must contain two digits\"\n        },\n        {\n            \"timestamp\": \"Jun 19, 2023 06:15:44 PM\",\n            \"code\": 422,\n            \"detail\": \"The password must contain only one uppercase letter\"\n        },\n        {\n            \"timestamp\": \"Jun 19, 2023 06:15:44 PM\",\n            \"code\": 422,\n            \"detail\": \"The password must be between 8 and 12 characters long and can only contain alphanumeric characters\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc19uZXdAZ21haWwuY29tIn0.-WWlt2Mfho9VNqywgXRTxNEy47WNW6Deexo8fFukBy8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/bci_app/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bci_app",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "[OK] Valid Token",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc19uZXdAZ21haWwuY29tIn0.-WWlt2Mfho9VNqywgXRTxNEy47WNW6Deexo8fFukBy8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/bci_app/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bci_app",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"c88df3b8-958d-4c23-a9b9-b560b2b352dd\",\n    \"created\": \"Jun 20, 2023 01:56:28 PM\",\n    \"lastLogin\": null,\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc19uZXdAZ21haWwuY29tIn0.2ONjmeewwio68eNF5lOy0dm8C_gP1O6gKnl3VlPBakI\",\n    \"isActive\": true,\n    \"name\": \"Multiple Phones\",\n    \"email\": \"multiple_phones_new@gmail.com\",\n    \"password\": \"Password11 (no es buena práctica retornar la contraseña pero el enunciado lo requería)\",\n    \"phones\": [\n        {\n            \"number\": 1111111111,\n            \"cityCode\": 111,\n            \"countryCode\": \"AR\"\n        },\n        {\n            \"number\": 2222222222,\n            \"cityCode\": 111,\n            \"countryCode\": \"CL\"\n        },\n        {\n            \"number\": 3333333333,\n            \"cityCode\": 111,\n            \"countryCode\": \"PE\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "[ERROR] No Token",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer invalid_token",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/bci_app/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bci_app",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": [\n        {\n            \"timestamp\": \"Jun 19, 2023 06:32:00 PM\",\n            \"code\": 401,\n            \"detail\": \"Required request header 'Authorization' for method parameter type String is not present\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "[ERROR] Account Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer invalid_token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/bci_app/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bci_app",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": [\n        {\n            \"timestamp\": \"Jun 19, 2023 06:32:15 PM\",\n            \"code\": 404,\n            \"detail\": \"The token does not match any account\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

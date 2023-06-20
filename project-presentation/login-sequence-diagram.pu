@@ -1,0 +1,65 @@
+@startuml login.pu
+
+title "Login"
+footer Francisco Yanes
+
+actor Client
+boundary AppController
+control LoginService <<Interface>>
+database AccountRepository
+database PhoneRepository
+participant GlobalErrorHandler
+
+Client -> AppController: Web request with 'Authorization' header
+activate AppController
+
+AppController -> AppController: //Request Validation//
+
+alt Valid Request
+
+    AppController -> LoginService: loginAccount(String)
+    activate LoginService
+
+    LoginService -> AccountRepository: findByToken(String)
+    activate AccountRepository
+
+    AccountRepository --> LoginService: AccountEntity
+    deactivate AccountRepository
+
+    LoginService -> LoginService: updateAccountData(AccountEntity)
+    activate LoginService
+
+    LoginService -> AccountRepository: save(AccountEntity)
+    activate AccountRepository
+
+    AccountRepository --> LoginService: AccountEntity
+    deactivate AccountRepository
+
+    LoginService --> LoginService
+    deactivate LoginService
+
+    LoginService -> PhoneRepository: findByAccount(AccountEntity)
+    activate PhoneRepository
+
+    PhoneRepository -> LoginService: List<PhoneEntity>
+    deactivate PhoneRepository
+
+    LoginService --> AppController: ResponseEntity<LoginResponseDto>
+    deactivate LoginService
+
+    AppController --> Client: ResponseEntity<LoginResponseDto>
+    deactivate AppController
+
+else Invalid Request
+
+    AppController --> GlobalErrorHandler: handleException(Exception, WebRequest)
+    activate  GlobalErrorHandler
+
+    GlobalErrorHandler --> AppController: ResponseEntity<ErrorResponseDto>
+    deactivate  GlobalErrorHandler
+
+    AppController --> Client: ResponseEntity<ErrorResponseDto>
+    deactivate  AppController
+end
+
+@enduml

@@ -1,0 +1,17 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /bci_app/v1
+spring:
+  datasource:
+    url: jdbc:h2:file:./h2-databases/bci
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update # Cómo se genera el DDL de la base de datos.
+    database-platform: org.hibernate.dialect.H2Dialect # El dialect es la manera en la que se interactúa con el motor de la base de datos.
+  h2:
+    console:
+      enabled: true # Para poder visualizar la consola de H2.
