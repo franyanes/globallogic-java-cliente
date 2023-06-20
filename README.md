@@ -86,7 +86,7 @@ El proyecto cuenta con una base de datos ya creada y con entradas cargadas para 
 
 #### 1. Sign Up
 
-![signup-sequence-diagram](.assets.README/signup-sequence-diagram.png)
+![signup-sequence-diagram](project-presentation/signup-sequence-diagram.png)
 
 #### 2. Login
 
