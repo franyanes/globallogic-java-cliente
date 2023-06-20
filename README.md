@@ -65,6 +65,7 @@ Las credenciales son:
 El proyecto cuenta con una base de datos ya creada y con entradas cargadas para testear. Estas entradas son:
 
 - `ACCOUNTS`
+
   |ID|CREATED|EMAIL|IS_ACTIVE|LAST_LOGIN|NAME|PASSWORD|TOKEN|
   |--|--|--|--|--|--|--|--|
   | a4edb0618d294123bdd8b204a4d981a7 | 2023-06-15 19:39:59.277 | multiple_phones@gmail.com    | TRUE      | *null*                  | Multiple Phones | HbEdQ7qxR39LDzJNEyWmvA== | eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc0BnbWFpbC5jb20ifQ.bIQceHZdQ0UEi_YuBngMRTaQUJcklYU1vE0gQKllid8 |
