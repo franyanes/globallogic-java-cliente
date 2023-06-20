@@ -51,7 +51,7 @@ La puerta de entrada a la aplicación se levanta en el puerto `8081` con el path
 - **Sign Up**: `http://localhost:8081/bci_app/v1/sign_up`
 - **Login**: `http://localhost:8081/bci_app/v1/login`
 
-Dentro del proyecto se encuentra una [colección de Postman](TODO) lista para ser usada contra la aplicación.
+Dentro del proyecto se encuentra una [colección de Postman](franyanes-bci.postman_collection.json) lista para ser usada contra la aplicación.
 
 #### Interacción con la Base de Datos
 
@@ -90,8 +90,8 @@ El proyecto cuenta con una base de datos ya creada y con entradas cargadas para 
 
 #### 2. Login
 
-![login-sequence-diagram](.assets.README/login-sequence-diagram.png)
+![login-sequence-diagram](project-presentation/login-sequence-diagram.png)
 
 ### Diagrama de Componentes
 
-![component-diagram](.assets.README/component-diagram.png)
+![component-diagram](project-presentation/component-diagram.png)
