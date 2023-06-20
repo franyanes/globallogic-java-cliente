@@ -44,16 +44,10 @@ public class GlobalErrorHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     protected ResponseEntity<ErrorResponseDto> handleMethodArgumentNotValidException(MethodArgumentNotValidException ex, WebRequest request) {
-        String info = "======================\nINFO:\n" + ex;
-        System.out.println(info);
-        System.out.println(ex.getMessage());
         return createErrorResponse(ex.getAllErrors(), HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
     private ResponseEntity<ErrorResponseDto> createErrorResponse(Exception ex, HttpStatus httpStatus) {
-        String info = "======================\nINFO:\n" + ex;
-        System.out.println(info);
-        System.out.println(ex.getMessage());
         List<ErrorDto> errors = new ArrayList<>();
         errors.add(ErrorDto.builder()
                 .timestamp(CustomDateFormatter.convertDateToString(LocalDateTime.now()))
