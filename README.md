@@ -68,18 +68,18 @@ El proyecto cuenta con una base de datos ya creada y con entradas cargadas para 
 
   |ID|CREATED|EMAIL|IS_ACTIVE|LAST_LOGIN|NAME|PASSWORD|TOKEN|
   |--|--|--|--|--|--|--|--|
-  | a4edb0618d294123bdd8b204a4d981a7 | 2023-06-15 19:39:59.277 | multiple_phones@gmail.com    | TRUE      | *null*                  | Multiple Phones | HbEdQ7qxR39LDzJNEyWmvA== | eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc0BnbWFpbC5jb20ifQ.bIQceHZdQ0UEi_YuBngMRTaQUJcklYU1vE0gQKllid8 |
-  | c2d625a4dd6549a2b589f139ea28cde3 | 2023-06-15 19:41:47.671 | simple_account@gmail.com     | TRUE      | *null*                  | Simple Account  | HbEdQ7qxR39LDzJNEyWmvA== | eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNpbXBsZV9hY2NvdW50QGdtYWlsLmNvbSJ9.h5XyMrzLo-MlaTi_BWahR1vURAXHPmXxrMQNUrk-S_Q |
-  | ac774db319734ade9f7e9e0590a54f58 | 2023-06-15 19:42:50.394 | no_optional_fields@gmail.com | TRUE      | 2023-06-15 19:48:46.605 | *null*          | HbEdQ7qxR39LDzJNEyWmvA== | eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im5vX29wdGlvbmFsX2ZpZWxkc0BnbWFpbC5jb20ifQ.eJvB4r4c0KmXKiSgWMKjBy6-ZEsXYPkMwjDysPr_DDM |
+  | 551e84f3d6da448e886f73070ceb6bec | 2023-06-20 21:02:55.449 | simple_account@gmail.com     | TRUE      | *null*     | Simple Account  | HbEdQ7qxR39LDzJNEyWmvA== | eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNpbXBsZV9hY2NvdW50QGdtYWlsLmNvbSJ9.jV6jrT_Z6ggh1dS1UBdLM3lMrLabWMnbUHPq2t241gs |
+  | 0c06e88fec1b458aa007d25d287ddf69 | 2023-06-20 21:03:06.024 | multiple_phones@gmail.com    | TRUE      | *null*     | Multiple Phones | HbEdQ7qxR39LDzJNEyWmvA== | eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc0BnbWFpbC5jb20ifQ.LQGoGi4NQJldfC6ZRBtmELAT5G1gZZ_aJXEH4niphJs |
+  | 288b7faee97b45f6bb7c9ddb98ebfb1a | 2023-06-20 21:03:12.238 | no_optional_fields@gmail.com | TRUE      | *null*     | *null*          | HbEdQ7qxR39LDzJNEyWmvA== | eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im5vX29wdGlvbmFsX2ZpZWxkc0BnbWFpbC5jb20ifQ.FMnHv9ReanUNgxri9n7U2ErtCon8L-MIUPJ_UUWhXrc |
 
 - `PHONES`
 
   | ID                               | CITY_CODE | COUNTRY_CODE | NUMBER     | ACCOUNT_ID                       |
   | -------------------------------- | --------- | ------------ | ---------- | -------------------------------- |
-  | edbbbfaf554a45c3ad1f954d6fe7b93c | 111       | AR           | 1111111111 | a4edb0618d294123bdd8b204a4d981a7 |
-  | 4a75ca8985f34b00ae192dfc49eb5f6c | 111       | CL           | 2222222222 | a4edb0618d294123bdd8b204a4d981a7 |
-  | 70a572dbf9ab49e2a36a1d5a32987b5c | 111       | PE           | 3333333333 | a4edb0618d294123bdd8b204a4d981a7 |
-  | 47382dd4b1ef408ebb9846c404aebc15 | 111       | AR           | 1111111111 | c2d625a4dd6549a2b589f139ea28cde3 |
+  | 8af9d70cb6f94408b9675e4bcbf2371d | 111       | AR           | 1111111111 | 551e84f3d6da448e886f73070ceb6bec |
+  | 825b0b7b6ccc4f0388d5ae1a12e0b522 | 111       | AR           | 1111111111 | 0c06e88fec1b458aa007d25d287ddf69 |
+  | d4fd632da78b4fefb5e5c1fa28fd8ba4 | 111       | CL           | 2222222222 | 0c06e88fec1b458aa007d25d287ddf69 |
+  | f7de5ce68f2c43f891c32948418617d0 | 111       | PE           | 3333333333 | 0c06e88fec1b458aa007d25d287ddf69 |
 
 ## Diagramas
 

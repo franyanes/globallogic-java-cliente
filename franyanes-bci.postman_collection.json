@@ -14,7 +14,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"Simple Account\",\r\n    \"email\":\"simple_account_2023@gmail.com\",\r\n    \"password\":\"Password11\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": 1111111111,\r\n            \"cityCode\": 111,\r\n            \"countryCode\": \"AR\"\r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n    \"name\":\"TODO\",\r\n    \"email\":\"TODO\",\r\n    \"password\":\"TODO\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": 1111111111,\r\n            \"cityCode\": 111,\r\n            \"countryCode\": \"AR\"\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -64,6 +64,8 @@
 							]
 						}
 					},
+					"status": "OK",
+					"code": 200,
 					"_postman_previewlanguage": "json",
 					"header": [
 						{
@@ -326,7 +328,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc19uZXdAZ21haWwuY29tIn0.-WWlt2Mfho9VNqywgXRTxNEy47WNW6Deexo8fFukBy8",
+						"value": "Bearer _TOKEN_",
 						"type": "text"
 					}
 				],
@@ -361,7 +363,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc19uZXdAZ21haWwuY29tIn0.-WWlt2Mfho9VNqywgXRTxNEy47WNW6Deexo8fFukBy8",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc0BnbWFpbC5jb20ifQ.ty0U9W_ZTuLRfvxvnVgD7bmmaWmXX8my0Jc-k2-tOhs",
 								"type": "text"
 							}
 						],
@@ -401,7 +403,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"id\": \"c88df3b8-958d-4c23-a9b9-b560b2b352dd\",\n    \"created\": \"Jun 20, 2023 01:56:28 PM\",\n    \"lastLogin\": null,\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc19uZXdAZ21haWwuY29tIn0.2ONjmeewwio68eNF5lOy0dm8C_gP1O6gKnl3VlPBakI\",\n    \"isActive\": true,\n    \"name\": \"Multiple Phones\",\n    \"email\": \"multiple_phones_new@gmail.com\",\n    \"password\": \"Password11 (no es buena práctica retornar la contraseña pero el enunciado lo requería)\",\n    \"phones\": [\n        {\n            \"number\": 1111111111,\n            \"cityCode\": 111,\n            \"countryCode\": \"AR\"\n        },\n        {\n            \"number\": 2222222222,\n            \"cityCode\": 111,\n            \"countryCode\": \"CL\"\n        },\n        {\n            \"number\": 3333333333,\n            \"cityCode\": 111,\n            \"countryCode\": \"PE\"\n        }\n    ]\n}"
+					"body": "{\n    \"id\": \"c88df3b8-958d-4c23-a9b9-b560b2b352dd\",\n    \"created\": \"Jun 20, 2023 01:56:28 PM\",\n    \"lastLogin\": null,\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc19uZXdAZ21haWwuY29tIn0.2ONjmeewwio68eNF5lOy0dm8C_gP1O6gKnl3VlPBakI\",\n    \"isActive\": true,\n    \"name\": \"Multiple Phones\",\n    \"email\": \"multiple_phones@gmail.com\",\n    \"password\": \"Password11 (no es buena práctica retornar la contraseña pero el enunciado lo requería)\",\n    \"phones\": [\n        {\n            \"number\": 1111111111,\n            \"cityCode\": 111,\n            \"countryCode\": \"AR\"\n        },\n        {\n            \"number\": 2222222222,\n            \"cityCode\": 111,\n            \"countryCode\": \"CL\"\n        },\n        {\n            \"number\": 3333333333,\n            \"cityCode\": 111,\n            \"countryCode\": \"PE\"\n        }\n    ]\n}"
 				},
 				{
 					"name": "[ERROR] No Token",
