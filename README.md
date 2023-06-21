@@ -69,7 +69,7 @@ El proyecto cuenta con una base de datos ya creada y con entradas cargadas para 
   |ID|CREATED|EMAIL|IS_ACTIVE|LAST_LOGIN|NAME|PASSWORD|TOKEN|
   |--|--|--|--|--|--|--|--|
   | 551e84f3d6da448e886f73070ceb6bec | 2023-06-20 21:02:55.449 | simple_account@gmail.com     | TRUE      | *null*     | Simple Account  | HbEdQ7qxR39LDzJNEyWmvA== | eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNpbXBsZV9hY2NvdW50QGdtYWlsLmNvbSJ9.jV6jrT_Z6ggh1dS1UBdLM3lMrLabWMnbUHPq2t241gs |
-  | 0c06e88fec1b458aa007d25d287ddf69 | 2023-06-20 21:03:06.024 | multiple_phones@gmail.com    | TRUE      | *null*     | Multiple Phones | HbEdQ7qxR39LDzJNEyWmvA== | eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc0BnbWFpbC5jb20ifQ.LQGoGi4NQJldfC6ZRBtmELAT5G1gZZ_aJXEH4niphJs |
+  | 0c06e88fec1b458aa007d25d287ddf69 | 2023-06-20 21:03:06.024 | multiple_phones@gmail.com    | TRUE      | *null*     | Multiple Phones | HbEdQ7qxR39LDzJNEyWmvA== | eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc0BnbWFpbC5jb20ifQ.7jerFl1_i9W7FDBnZLDppL5yjxK0tm1Qe_dwy-84z7w |
   | 288b7faee97b45f6bb7c9ddb98ebfb1a | 2023-06-20 21:03:12.238 | no_optional_fields@gmail.com | TRUE      | *null*     | *null*          | HbEdQ7qxR39LDzJNEyWmvA== | eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im5vX29wdGlvbmFsX2ZpZWxkc0BnbWFpbC5jb20ifQ.FMnHv9ReanUNgxri9n7U2ErtCon8L-MIUPJ_UUWhXrc |
 
 - `PHONES`
