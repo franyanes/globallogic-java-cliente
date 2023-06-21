@@ -25,14 +25,13 @@ El ejercicio consta del desarrollo de un microservicio para la creación y consu
 
 ### Requerimientos
 
-Para correr el proyecto es necesario contar con:
+Para correr el proyecto es necesario contar con un IDE que integre las siguientes tecnologías:
 
-- Un IDE que integre las siguientes tecnologías (**IntelliJ** o **Spring Tool Suite** son recomendados):
-  - JDK 1.8
-  - Spring Boot
-  - Gradle
+- JDK 1.8
+- Spring Boot
+- Gradle
 
-- Postman
+**IntelliJ** y **Spring Tool Suite** son recomendados.
 
 ### Instrucciones de Instalación
 
