@@ -363,7 +363,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc0BnbWFpbC5jb20ifQ.ty0U9W_ZTuLRfvxvnVgD7bmmaWmXX8my0Jc-k2-tOhs",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bHRpcGxlX3Bob25lc0BnbWFpbC5jb20ifQ.7jerFl1_i9W7FDBnZLDppL5yjxK0tm1Qe_dwy-84z7w",
 								"type": "text"
 							}
 						],
